@@ -4,15 +4,15 @@ resources:
   source:
     uri: https://github.com/mgiannamore/angular-testing
     branch: master
-#- name: cloud-foundry-bazaz-demo
-#  type: cf
-#  source:
-#    api: https://api.sys.gn01.pcf.dcsg.com
-#    username: ((cf_user_nonprod))
-#    password: ((cf_password_nonprod))
-#    organization: bazaz-demo
-#    space: dev
-#    skip_cert_check: true
+- name: cloud-foundry-bazaz-demo
+  type: cf
+  source:
+    api: https://api.sys.gn01.pcf.dcsg.com
+    username: ((cf_user_nonprod))
+    password: ((cf_password_nonprod))
+    organization: bazaz-demo
+    space: dev
+    skip_cert_check: true
 
 jobs:
 - name: unit-test
@@ -32,7 +32,7 @@ jobs:
       - unit-test
     - task: run-build
       file: codebase/ci/tasks/run-build.yml
-#    - put: cloud-foundry-bazaz-demo
-#      params:
-#        manifest: codebase/manifest.yml
-#        path: compiled-code/
+    - put: cloud-foundry-bazaz-demo
+      params:
+        manifest: codebase/manifest.yml
+        path: compiled-code/
