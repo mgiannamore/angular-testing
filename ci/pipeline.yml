@@ -14,3 +14,12 @@ jobs:
   - task: run-tests
     file: codebase/ci/tasks/run-tests.yml
     privileged: true
+- name: build-and-deploy
+  serial: true
+  plan:
+    - get: codebase
+      trigger: true
+      passed:
+      - unit-test
+    - task: run-build
+      file: codebase/ci/tasks/run-build.yml
