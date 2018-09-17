@@ -2,4 +2,4 @@
 
 cd codebase
 npm i
-ls
+npm test-headless
