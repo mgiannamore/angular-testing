@@ -1,0 +1,6 @@
+resources:
+- name: git-repo
+  type: git
+  source:
+    uri: https://github.com/mgiannamore/angular-testing
+    branch: master
