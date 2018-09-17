@@ -2,4 +2,6 @@
 
 cd codebase
 npm i
-npm run test-headless
+cd node_modules
+cd @angular
+ls
