@@ -3,4 +3,5 @@
 pwd
 ls
 cd codebase
-ls
+pwd
+ls 
