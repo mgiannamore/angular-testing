@@ -1,6 +1,16 @@
 resources:
-- name: git-repo
+- name: codebase
   type: git
   source:
     uri: https://github.com/mgiannamore/angular-testing
     branch: master
+
+jobs:
+- name: unit-test
+  serial: true
+  plan:
+  - get: codebase
+    trigger: true
+  - task: run-tests
+    file: codebase/pipelines/tasks/run-tests.yml
+    privileged: true

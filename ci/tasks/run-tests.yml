@@ -1,0 +1,13 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: pivotalpa/angular-cli
+
+inputs:
+- name: codebase
+
+run:
+  path: ./codebase/ci/tasks/run-tests.sh
