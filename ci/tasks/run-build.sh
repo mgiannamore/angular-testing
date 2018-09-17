@@ -3,6 +3,5 @@
 cd codebase
 npm install
 ng build --prod --aot
-cp -r dist/* ../compiled-code/
-cd ../compiled-code
+cd dist
 ls
