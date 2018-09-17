@@ -2,3 +2,5 @@
 
 pwd
 ls
+cd codebase
+ls
