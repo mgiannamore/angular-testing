@@ -12,5 +12,5 @@ jobs:
   - get: codebase
     trigger: true
   - task: run-tests
-    file: codebase/pipelines/tasks/run-tests.yml
+    file: codebase/ci/tasks/run-tests.yml
     privileged: true
