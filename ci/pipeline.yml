@@ -20,8 +20,11 @@ jobs:
   plan:
   - get: codebase
     trigger: true
-  - task: run-tests
+  - task: run-unit-tests
     file: codebase/ci/tasks/run-tests.yml
+    privileged: true
+  - task: run-e2e-tests
+    file: codebase/ci/tasks/run-e2e.yml
     privileged: true
 - name: build-and-deploy
   serial: true
