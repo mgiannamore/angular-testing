@@ -11,7 +11,4 @@ inputs:
 - name: codebase
 
 run:
-  path: sh
-  args: |
-        chmod +x ./codebase/ci/tasks/run-e2e.sh
-        exc ./codebase/ci/tasks/run-e2e.sh
+  path: ./codebase/ci/tasks/run-e2e.sh
