@@ -2,4 +2,4 @@
 
 cd codebase
 npm i
-npm e2e
+npm run e2e
