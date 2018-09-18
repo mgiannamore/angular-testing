@@ -15,7 +15,7 @@ resources:
     skip_cert_check: true
 
 jobs:
-- name: unit-test
+- name: run-tests
   serial: true
   plan:
   - get: codebase
