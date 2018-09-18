@@ -8,7 +8,8 @@
     "test": "ng test",
     "test-headless": "ng test --no-sandbox",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "e2e-no-update": "ng e2e --webdriver-update false"
   },
   "private": true,
   "dependencies": {
