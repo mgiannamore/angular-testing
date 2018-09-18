@@ -32,7 +32,7 @@ jobs:
     - get: codebase
       trigger: true
       passed:
-      - unit-test
+      - run-tests
     - task: run-build
       file: codebase/ci/tasks/run-build.yml
     - put: cloud-foundry-bazaz-demo
